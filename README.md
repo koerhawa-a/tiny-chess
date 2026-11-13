@@ -6,6 +6,10 @@
 
 A chess engine in at most 4,096 bytes of Python: 0x88 board, negamax alpha-beta with quiescence, transposition table, killer and history ordering, null-move pruning, LMR, and a tapered piece-square evaluation. It searches to a fixed node budget per move, never to a clock, so every game replays deterministically. It talks to the make.fun env over HTTP and plays the house gauntlet.
 
+## Trial result
+
+Budget 200k nodes/move — trial-0: 7 wins, 2 draws, 7 losses, Elo 1,396, above the sunfish baseline (1,360).
+
 ## Run it
 
 ```sh
