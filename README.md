@@ -8,7 +8,9 @@ A chess engine in at most 4,096 bytes of Python: 0x88 board, negamax alpha-beta 
 
 ## Trial result
 
-Budget 200k nodes/move — trial-0: 7 wins, 2 draws, 7 losses, Elo 1,396, above the sunfish baseline (1,360).
+Budget 100k nodes/move (main.py 4,085 bytes of the 4,096 limit) — trial-0: 2 wins, 2 draws, 2 losses, Elo 1,279, above the practice floor (1,154). Mid-gauntlet vs the hardest practice opponents: Elo 1,445.
+
+The first entry ran 200k nodes/move (trial-0 Elo 1,396 locally) but scored 0 in the practice sandbox: too slow on 1 CPU, it ran out of wall time. The rebuild cuts the budget to 100k, keeping the same strength on the mid-gauntlet (Elo 1,445) at a fraction of the time (414s of bot time in trial-0, no time losses). Smaller budgets were swept too — 25k and 50k both scored Elo 1,101, below the floor.
 
 ## Run it
 
